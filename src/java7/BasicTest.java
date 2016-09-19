@@ -1,11 +1,15 @@
 package java7;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import java7.polymorphism_Inheritance.Rectangle;
+import java7.polymorphism_Inheritance.Square;
 
 public class BasicTest {
 	@Test
@@ -24,7 +28,15 @@ public class BasicTest {
 		
 		List list2 = list1;
 		list2.add("test2");
-		assertTrue(list1.size() == 2);
+		assertTrue(list2.size() == 2);
 			
+	}
+	
+	@Test
+	public void polymorphiList(){
+		List<Rectangle> rectangles = new ArrayList<>(3);
+		rectangles.add(new Rectangle(5, 1));
+		rectangles.add(new Rectangle(2, 10));
+		rectangles.add(new Square(9));
 	}
 }
